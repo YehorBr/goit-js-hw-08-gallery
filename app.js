@@ -93,14 +93,11 @@ const galleryItems = [
   galleryRef.addEventListener('click', onIconClick);
 
   function onIconClick(event){
-    // console.log(event.target.nodeName);
-    // console.log(event.currentTarget);
-
     if(event.target.nodeName !== 'IMG'){
         return
     }
-
     modalBackdrop.classList.add('is-open')
+    modalIconRef.src = event.target.dataset.source
   }
   
   closeModalButtonRef.addEventListener('click', closeModalOnClick);
